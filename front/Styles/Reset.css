@@ -1,0 +1,165 @@
+/* Reset CSS avanzado - Top de Top */
+
+/* Establecemos que el ancho y alto de los elementos incluya el padding y borde */
+html {
+    box-sizing: border-box;
+    /* Esto es para que cuando decimos que un elemento es de 100px de ancho, se mantenga así con el padding y el borde */
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    /* Esto es para que los tamaños de texto en dispositivos móviles se vean bien */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    /* Esto hace que el box-sizing que establecimos antes se aplique a todos los elementos */
+}
+
+/* Margen y padding a cero para todos los elementos */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+    padding: 0;
+    /* Borrar los márgenes y paddings predeterminados para evitar problemas de espaciado no deseados */
+}
+
+/* Establecemos un tamaño de fuente base y otros estilos de texto */
+body {
+    font-family: Arial, sans-serif;
+    /* Esto es lo que usamos como tipo de fuente base para todo el documento */
+    font-size: 16px;
+    /* El tamaño de fuente base */
+    line-height: 1.6;
+    /* El espacio entre líneas */
+    color: #333;
+    /* Color del texto, negro suave */
+}
+
+/* Lista sin estilos */
+ul,
+ol {
+    list-style: none;
+    /* Quitamos las viñetas de las listas */
+}
+
+/* Estilos de enlace básicos */
+a {
+    color: #007bff;
+    /* Azul bonito para los enlaces */
+    text-decoration: none;
+    /* Sin subrayado por defecto */
+}
+
+a:hover {
+    text-decoration: underline;
+    /* Agregamos subrayado al pasar el ratón sobre un enlace */
+}
+
+/* Estilos para encabezados */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+    /* Hacemos que los encabezados se vean en negrita */
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    /* Agregamos un poco de espacio arriba y abajo de los encabezados */
+}
+
+/* Estilos para elementos de bloque */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section,
+summary {
+    display: block;
+    /* Hacemos que estos elementos sean de bloque, ocupando toda la línea */
+}
+
+/* Ajustes para imágenes */
+img {
+    max-width: 100%;
+    /* Hacemos que las imágenes no se salgan de su contenedor */
+    height: auto;
+    /* Mantenemos la proporción de aspecto al cambiar el ancho */
+}
+
+/* Estilos para formularios */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+    vertical-align: middle;
+    color: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Quitamos todos los estilos por defecto de los elementos de formulario */
+}
+
+/* Estilos para botones */
+button {
+    cursor: pointer;
+    /* Cambiamos el cursor a una mano cuando pasamos sobre un botón */
+}
+
+/* Estilos para tablas */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    /* Hacemos que las tablas ocupen todo el ancho disponible */
+}
+
+/* Ajustes de accesibilidad */
+img,
+video {
+    max-width: 100%;
+    /* Las imágenes y videos no deben desbordar su contenedor */
+    height: auto;
+    /* Mantenemos la proporción de aspecto */
+}
+
+/* Estilos para compatibilidad con dispositivos móviles */
+@media only screen and (max-width: 768px) {
+    /* Aquí puedes agregar estilos específicos para dispositivos móviles */
+}
+
+/* Estilos para mejorar el rendimiento */
+html {
+    scroll-behavior: smooth;
+    /* Agregamos desplazamiento suave */
+}
+
+body {
+    overflow-x: hidden;
+    /* Evitamos el desplazamiento horizontal en dispositivos móviles */
+}

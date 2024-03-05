@@ -1,0 +1,11 @@
+
+
+.nav-item {
+    float: right;
+    margin-left: 20px;
+}
+
+.nav-item:first-child{
+    float: left;
+    margin-right: auto;
+}
