@@ -1,11 +1,139 @@
+/* Estilos CSS */
 
-
-.nav-item {
-    float: right;
-    margin-left: 20px;
+/* Resetear los márgenes del cuerpo del documento */
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  /* Establece el tamaño de la fuente en 15px */
+  font-size: 15px; /* Aumenta el tamaño de la fuente según sea necesario */
+  background-color: #066188; /* Color de fondo del cuerpo del documento */
 }
 
-.nav-item:first-child{
-    float: left;
-    margin-right: auto;
+/* Estilos generales del header */
+header {
+  background-color: #51B8E4; /* Color de fondo del encabezado */
+  padding: 20px; /* Espaciado interno del encabezado */
+  text-align: center; /* Centrado del contenido del encabezado */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Distribución horizontal de los elementos del encabezado */
+  align-items: center; /* Alineación vertical de los elementos del encabezado */
+}
+
+.title {
+  color: white; /* Color del título */
+  font-size: 36px; /* Tamaño del texto del título */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  transition: color 0.3s; /* Transición suave para el cambio de color del título */
+}
+
+.title:hover {
+  color: #ccc; /* Cambio de color al pasar el cursor sobre el título */
+}
+
+.navbar-right ul {
+  list-style-type: none; /* Elimina las viñetas de la lista de navegación */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-right li {
+  display: inline; /* Muestra los elementos de la lista de navegación en línea */
+  margin-left: 10px; /* Espacio entre los elementos de la lista de navegación */
+}
+
+/* Estilos de los botones de navegación */
+.nav-button {
+  background-color: #555; /* Color de fondo inicial de los botones de navegación */
+  border: none; /* Sin borde */
+  color: white; /* Color del texto de los botones de navegación */
+  padding: 10px 20px; /* Espaciado interno de los botones de navegación */
+  text-align: center; /* Centrado del texto de los botones de navegación */
+  text-decoration: none; /* Sin subrayado */
+  display: inline-block;
+  font-size: 16px; /* Tamaño del texto de los botones de navegación */
+  cursor: pointer; /* Cambia el cursor al pasar por encima de los botones de navegación */
+  border-radius: 5px; /* Borde redondeado */
+  transition: background-color 0.3s; /* Transición suave para el cambio de color de fondo */
+}
+
+.nav-button:hover {
+  background-color: #777; /* Cambio de color de fondo al pasar el cursor sobre los botones de navegación */
+}
+
+/* Estilos de las tarjetas */
+.card {
+  display: inline-block;
+  width: 200px; /* Ancho deseado de las tarjetas */
+  height: 300px; /* Altura deseada de las tarjetas */
+  margin: 10px; /* Margen entre las tarjetas */
+  perspective: 1000px; /* Profundidad de la perspectiva para el efecto 3D */
+}
+
+.card__front,
+.card__content {
+  width: 100%;
+  height: 100%;
+}
+
+.card__front {
+  position: relative;
+  transition: transform 0.8s; /* Transición suave para el efecto 3D */
+}
+
+.card:hover .card__front {
+  transform: rotateY(180deg); /* Gira 180 grados en el eje Y al pasar el cursor sobre la tarjeta */
+}
+
+.card__content {
+  display: none; /* Oculta el contenido trasero por defecto */
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden; /* Oculta la cara trasera */
+  transform: rotateY(180deg); /* Gira inicialmente 180 grados para mostrar el contenido trasero */
+  background-color: #c9c3c3; /* Color de fondo por defecto del contenido trasero */
+}
+
+.card:hover .card__content {
+  display: block; /* Muestra el contenido trasero al pasar el cursor sobre la tarjeta */
+  transform: rotateY(0deg); /* Gira 0 grados en el eje Y al pasar el cursor sobre la tarjeta */
+}
+
+/* Estilos adicionales para el texto */
+.card__text {
+  color: rgb(10, 10, 10); /* Color del texto */
+  padding: 10px;
+}
+
+/* Estilos adicionales para la imagen */
+.movie-poster {
+  width: 100%;
+  height: auto;
+}
+
+/* Estilos para el contenedor de las tarjetas */
+#tarjetas-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; /* Centra horizontalmente las tarjetas */
+  gap: 20px; /* Espacio entre las tarjetas */
+}
+
+#btn-guardar-todas {
+  display: block;
+  margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+  padding: 10px 20px;
+  background-color: #007bff; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cambia el cursor al pasar por encima del botón */
+}
+
+#btn-guardar-todas:hover {
+  background-color: #0056b3; /* Cambio de color de fondo al pasar el cursor sobre el botón */
 }
