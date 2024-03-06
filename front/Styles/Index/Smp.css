@@ -1,0 +1,191 @@
+/* Estilos CSS */
+
+/* Resetear los márgenes del cuerpo del documento */
+body {
+  margin: 0; /* Establece los márgenes del cuerpo del documento en 0 */
+  font-family: "Roboto", sans-serif; /* Define la fuente del texto */
+  font-weight: 100; /* Define el peso de la fuente */
+  font-style: normal; /* Define el estilo de la fuente */
+  /* Establece el tamaño de la fuente en 15px */
+  font-size: 15px; /* Ajusta el tamaño de la fuente según sea necesario */
+  background-color: #121212; /* Establece el color de fondo del cuerpo del documento */
+}
+
+/* Estilos generales del header */
+header {
+  background-color: #1a1a1a; /* Establece el color de fondo del encabezado */
+  padding: 20px; /* Define el espaciado interno del encabezado */
+  text-align: center; /* Centra el contenido del encabezado */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Distribuye horizontalmente los elementos del encabezado */
+  align-items: center; /* Alinea verticalmente los elementos del encabezado */
+}
+
+.title {
+  color: white; /* Establece el color del título */
+  font-size: 36px; /* Define el tamaño del texto del título */
+  cursor: pointer; /* Cambia el cursor al pasar por encima del título */
+  transition: color 0.3s; /* Agrega una transición suave para el cambio de color del título */
+}
+
+.title:hover {
+  color: #ccc; /* Cambia el color al pasar el cursor sobre el título */
+}
+
+.navbar-right ul {
+  list-style-type: none; /* Elimina los puntos de la lista de navegación */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-right li {
+  display: inline; /* Muestra los elementos de la lista de navegación en línea */
+  margin-left: 10px; /* Define el espacio entre los elementos de la lista de navegación */
+}
+
+/* Estilos de los botones de navegación */
+.nav-button {
+  background-color: #555; /* Establece el color de fondo inicial de los botones de navegación */
+  border: none; /* Elimina el borde de los botones */
+  color: white; /* Define el color del texto de los botones de navegación */
+  padding: 10px 20px; /* Define el espaciado interno de los botones de navegación */
+  text-align: center; /* Centra el texto de los botones de navegación */
+  text-decoration: none; /* Elimina el subrayado del texto */
+  display: inline-block;
+  font-size: 16px; /* Define el tamaño del texto de los botones de navegación */
+  cursor: pointer; /* Cambia el cursor al pasar por encima de los botones de navegación */
+  border-radius: 5px; /* Agrega bordes redondeados */
+  transition: background-color 0.3s; /* Agrega una transición suave para el cambio de color de fondo */
+}
+
+.nav-button:hover {
+  background-color: #777; /* Cambia el color de fondo al pasar el cursor sobre los botones de navegación */
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  overflow-x: hidden;
+  color: #ccc;
+  font-size: 25px;
+}
+
+.container h1 {
+  font-size: 35px;
+  color: #ccc;
+}
+
+.content {
+  margin-top: 20px;
+}
+
+.content h2 {
+  font-size: 30px;
+  color: #333;
+}
+
+.content p {
+  font-size: 20px;
+  color: #ccc;
+}
+
+.technologies {
+  margin-top: 40px;
+}
+
+.technologies h2 {
+  font-size: 24px;
+  color: #ccc;
+}
+
+.gallery {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  margin: 5%;
+  flex-wrap: wrap; /* Permite que los elementos de la galería se ajusten a diferentes tamaños de pantalla */
+}
+
+.card {
+  flex: 0 0 calc(33.333% - 20px); /* Divide el espacio de las tarjetas, para que haya tres por fila en pantallas más grandes */
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin-bottom: 20px; /* Define el espacio entre las tarjetas */
+}
+
+.card:hover {
+  transform: scale(
+    1.05
+  ); /* Aumenta ligeramente el tamaño de la tarjeta al pasar el cursor sobre ella */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Agrega una sombra más pronunciada */
+}
+
+.card img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px; /* Reduce el relleno del contenedor en pantallas medianas */
+  }
+
+  .card {
+    flex: 0 0 calc(50% - 20px); /* Para que haya dos tarjetas por fila en pantallas medianas */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    flex: 0 0 calc(100% - 20px); /* Para que haya una tarjeta por fila en pantallas pequeñas */
+  }
+}
+
+footer {
+  background-color: #1a1a1a;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6%;
+  box-sizing: border-box;
+  border-top: 1px solid #131212;
+  display: flex;
+  font-size: 18px;
+  justify-content: space-between;
+  align-items: center;
+  color: #e7dfdf;
+  font-size: 18px;
+  margin: 0 0px; /* Agrega margen a ambos lados de la pantalla */
+}
+
+.footer-content p {
+  margin: 0; /* Elimina el margen predeterminado del párrafo */
+  font-size: 18px;
+  color: #0a0a0a;
+  transition: color 0.3s; /* Agrega una transición de color */
+}
+
+.social-icons .icon {
+  color: #e7dfdf;
+  font-size: 20px;
+  margin-left: 10px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons .icon:hover {
+  color: #007bff;
+  transform: scale(1.2);
+}

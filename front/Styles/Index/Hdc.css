@@ -1,0 +1,187 @@
+/* Estilos generales */
+body {
+  margin: 0; /* Elimina el margen predeterminado del cuerpo */
+  font-family: "Roboto", sans-serif; /* Establece la fuente principal como Roboto o una fuente sans-serif similar */
+  font-weight: 100; /* Define el peso de la fuente */
+  font-style: normal; /* Establece el estilo de la fuente como normal */
+  font-size: 15px; /* Establece el tamaño de la fuente en 15px */
+  background-color: #121212; /* Color de fondo del cuerpo del documento */
+}
+
+/* Estilos generales del encabezado */
+header {
+  background-color: #1a1a1a; /* Color de fondo del encabezado */
+  padding: 20px; /* Espaciado interno del encabezado */
+  text-align: center; /* Centra el contenido del encabezado */
+}
+
+.navbar {
+  display: flex; /* Hace que los elementos dentro del navbar sean flexibles */
+  justify-content: space-between; /* Distribuye horizontalmente los elementos del encabezado */
+  align-items: center; /* Alinea verticalmente los elementos del encabezado */
+}
+
+.title {
+  color: white; /* Color del título */
+  font-size: 36px; /* Tamaño del texto del título */
+  cursor: pointer; /* Cambia el cursor al pasar por encima del título */
+  transition: color 0.3s; /* Transición suave para el cambio de color del título */
+}
+
+.title:hover {
+  color: #ccc; /* Cambio de color al pasar el cursor sobre el título */
+}
+
+.navbar-right ul {
+  list-style-type: none; /* Elimina las viñetas de la lista de navegación */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-right li {
+  display: inline; /* Muestra los elementos de la lista de navegación en línea */
+  margin-left: 10px; /* Espacio entre los elementos de la lista de navegación */
+}
+
+/* Estilos de los botones de navegación */
+.nav-button {
+  background-color: #555; /* Color de fondo inicial de los botones de navegación */
+  border: none; /* Sin borde */
+  color: white; /* Color del texto de los botones de navegación */
+  padding: 10px 20px; /* Espaciado interno de los botones de navegación */
+  text-align: center; /* Centra el texto de los botones de navegación */
+  text-decoration: none; /* Sin subrayado */
+  display: inline-block; /* Muestra los botones de navegación en línea */
+  font-size: 16px; /* Tamaño del texto de los botones de navegación */
+  cursor: pointer; /* Cambia el cursor al pasar por encima de los botones de navegación */
+  border-radius: 5px; /* Borde redondeado */
+  transition: background-color 0.3s; /* Transición suave para el cambio de color de fondo */
+}
+
+.nav-button:hover {
+  background-color: #777; /* Cambio de color de fondo al pasar el cursor sobre los botones de navegación */
+}
+
+h1 {
+  text-align: center; /* Centra el texto del nivel 1 del encabezado */
+  font-size: 29px; /* Tamaño del texto del nivel 1 del encabezado */
+  margin-bottom: 10px; /* Margen inferior del título */
+  color: #ccc; /* Color del texto del título */
+}
+
+.content {
+  max-width: 800px; /* Ancho máximo del contenido */
+  margin: 0 auto; /* Centra el contenido horizontalmente */
+  padding: 20px; /* Espaciado interno del contenido */
+}
+
+.content h2 {
+  font-size: 24px; /* Tamaño del texto del nivel 2 del contenido */
+  margin-bottom: 10px; /* Margen inferior del título del nivel 2 */
+  color: #ccc; /* Color del texto del título del nivel 2 */
+}
+
+.content p {
+  font-size: 20px; /* Tamaño del texto del párrafo */
+  line-height: 1.5; /* Altura de línea del párrafo */
+  margin-bottom: 20px; /* Margen inferior del párrafo */
+  color: #ccc; /* Color del texto del párrafo */
+}
+
+.imge {
+  display: flex; /* Hace que los elementos dentro de .imge sean flexibles */
+  flex-wrap: wrap; /* Permite que los elementos dentro de .imge se envuelvan a una nueva línea si no caben */
+}
+
+.card {
+  flex: 1 0 200px; /* Hace que las tarjetas sean flexibles y tengan un ancho máximo de 200px */
+  margin: 5px; /* Margen alrededor de las tarjetas */
+  position: relative; /* Establece la posición de las tarjetas como relativa */
+  overflow: hidden; /* Oculta el contenido que se desborda de las tarjetas */
+}
+
+.card img {
+  width: 100%; /* Establece el ancho de la imagen al 100% del contenedor */
+  height: auto; /* Mantiene la relación de aspecto de la imagen */
+  transition: opacity 0.3s ease; /* Transición suave para el cambio de opacidad de la imagen */
+}
+
+.card:hover img {
+  opacity: 0.8; /* Reduce la opacidad de la imagen al pasar el cursor sobre la tarjeta */
+  cursor: pointer; /* Cambia el cursor al pasar por encima de la tarjeta */
+}
+
+.card::before {
+  content: ""; /* Inserta un contenido antes del contenido real de la tarjeta */
+  position: absolute; /* Establece la posición absoluta del pseudo-elemento */
+  top: 0; /* Alinea el pseudo-elemento en la parte superior */
+  left: 0; /* Alinea el pseudo-elemento en la parte izquierda */
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Altura completa */
+  background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  opacity: 0; /* Opacidad inicial */
+  transition: opacity 0.3s ease; /* Transición suave para el cambio de opacidad */
+}
+
+.card:hover::before {
+  opacity: 1; /* Aumenta la opacidad del pseudo-elemento al pasar el cursor sobre la tarjeta */
+}
+
+.card::after {
+  content: " "; /* Inserta un contenido después del contenido real de la tarjeta */
+  position: absolute; /* Establece la posición absoluta del pseudo-elemento */
+  top: 50%; /* Alinea el pseudo-elemento en la mitad verticalmente */
+  left: 50%; /* Alinea el pseudo-elemento en la mitad horizontalmente */
+  transform: translate(-50%, -50%); /* Centra el pseudo-elemento */
+  color: #fff; /* Color del texto del pseudo-elemento */
+  font-size: 20px; /* Tamaño del texto del pseudo-elemento */
+  opacity: 0; /* Opacidad inicial */
+  transition: opacity 0.3s ease; /* Transición suave para el cambio de opacidad */
+}
+
+.card:hover::after {
+  opacity: 1; /* Aumenta la opacidad del pseudo-elemento al pasar el cursor sobre la tarjeta */
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex: 1 0 100%; /* Hace que las tarjetas ocupen todo el ancho en dispositivos con un ancho máximo de 600px */
+  }
+}
+
+footer {
+  background-color: #1a1a1a; /* Color de fondo del pie de página */
+  padding: 10px; /* Espaciado interno del pie de página */
+  position: fixed; /* Fija el pie de página en la parte inferior de la ventana */
+  bottom: 0; /* Alinea el pie de página en la parte inferior */
+  left: 0; /* Alinea el pie de página en la parte izquierda */
+  width: 100%; /* Ancho completo */
+  height: 6%;
+  box-sizing: border-box; /* Incluye el borde y el relleno en el ancho y alto total */
+  border-top: 1px solid #131212; /* Borde superior del pie de página */
+  display: flex; /* Hace que los elementos dentro del pie de página sean flexibles */
+  justify-content: space-between; /* Distribuye horizontalmente los elementos */
+  align-items: center; /* Alinea verticalmente los elementos */
+  margin: 0 0px; /* Margen a ambos lados del pie de página */
+}
+
+.footer-content p {
+  margin: 0; /* Elimina el margen predeterminado del párrafo */
+  font-size: 18px; /* Tamaño del texto del párrafo */
+  color: #0a0a0a; /* Color del texto del párrafo */
+  transition: color 0.3s; /* Transición suave para el cambio de color */
+}
+
+.social-icons .icon {
+  color: #e7dfdf; /* Color del icono */
+  font-size: 20px; /* Tamaño del icono */
+  margin-left: 10px; /* Margen a la izquierda del icono */
+  transition: color 0.3s, transform 0.3s; /* Transición suave para el cambio de color y transformación */
+}
+
+.social-icons .icon:hover {
+  color: #007bff; /* Cambio de color al pasar el cursor sobre el icono */
+  transform: scale(
+    1.2
+  ); /* Aumenta el tamaño del icono al pasar el cursor sobre él */
+}

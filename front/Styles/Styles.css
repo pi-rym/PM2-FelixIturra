@@ -2,18 +2,18 @@
 
 /* Resetear los márgenes del cuerpo del documento */
 body {
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-  font-weight: 100;
-  font-style: normal;
+  margin: 0; /* Quita todos los márgenes alrededor del cuerpo del documento */
+  font-family: "Roboto", sans-serif; /* Establece la fuente principal */
+  font-weight: 100; /* Define el peso de la fuente */
+  font-style: normal; /* Establece el estilo de la fuente como normal */
   /* Establece el tamaño de la fuente en 15px */
   font-size: 15px; /* Aumenta el tamaño de la fuente según sea necesario */
-  background-color: #066188; /* Color de fondo del cuerpo del documento */
+  background-color: #121212; /* Color de fondo del cuerpo del documento */
 }
 
 /* Estilos generales del header */
 header {
-  background-color: #51B8E4; /* Color de fondo del encabezado */
+  background-color: #1a1a1a; /* Color de fondo del encabezado */
   padding: 20px; /* Espaciado interno del encabezado */
   text-align: center; /* Centrado del contenido del encabezado */
 }
@@ -86,7 +86,9 @@ header {
 }
 
 .card:hover .card__front {
-  transform: rotateY(180deg); /* Gira 180 grados en el eje Y al pasar el cursor sobre la tarjeta */
+  transform: rotateY(
+    180deg
+  ); /* Gira 180 grados en el eje Y al pasar el cursor sobre la tarjeta */
 }
 
 .card__content {
@@ -95,13 +97,17 @@ header {
   top: 0;
   left: 0;
   backface-visibility: hidden; /* Oculta la cara trasera */
-  transform: rotateY(180deg); /* Gira inicialmente 180 grados para mostrar el contenido trasero */
+  transform: rotateY(
+    180deg
+  ); /* Gira inicialmente 180 grados para mostrar el contenido trasero */
   background-color: #c9c3c3; /* Color de fondo por defecto del contenido trasero */
 }
 
 .card:hover .card__content {
   display: block; /* Muestra el contenido trasero al pasar el cursor sobre la tarjeta */
-  transform: rotateY(0deg); /* Gira 0 grados en el eje Y al pasar el cursor sobre la tarjeta */
+  transform: rotateY(
+    0deg
+  ); /* Gira 0 grados en el eje Y al pasar el cursor sobre la tarjeta */
 }
 
 /* Estilos adicionales para el texto */
@@ -136,4 +142,38 @@ header {
 
 #btn-guardar-todas:hover {
   background-color: #0056b3; /* Cambio de color de fondo al pasar el cursor sobre el botón */
+}
+
+footer {
+  background-color: #1a1a1a;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 1px solid #131212;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0px; /* Margen a ambos lados de la pantalla */
+}
+
+.footer-content p {
+  margin: 0; /* Elimina el margen predeterminado del párrafo */
+  font-size: 18px;
+  color: #0a0a0a;
+  transition: color 0.3s; /* Agrega una transición de color */
+}
+
+.social-icons .icon {
+  color: #e7dfdf;
+  font-size: 20px;
+  margin-left: 10px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons .icon:hover {
+  color: #007bff;
+  transform: scale(1.2);
 }
