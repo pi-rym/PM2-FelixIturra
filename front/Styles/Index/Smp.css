@@ -1,68 +1,79 @@
-/* Estilos CSS */
-
-/* Resetear los márgenes del cuerpo del documento */
+/* resetear los márgenes del cuerpo del documento */
 body {
-  margin: 0; /* Establece los márgenes del cuerpo del documento en 0 */
-  font-family: "Roboto", sans-serif; /* Define la fuente del texto */
-  font-weight: 100; /* Define el peso de la fuente */
-  font-style: normal; /* Define el estilo de la fuente */
-  /* Establece el tamaño de la fuente en 15px */
-  font-size: 15px; /* Ajusta el tamaño de la fuente según sea necesario */
-  background-color: #121212; /* Establece el color de fondo del cuerpo del documento */
+  margin: 0; /* establece los márgenes del cuerpo del documento en 0 */
+  font-family: "Roboto", sans-serif; /* define la fuente del texto */
+  font-weight: 100; /* define el peso de la fuente */
+  font-style: normal; /* define el estilo de la fuente */
+  /* establece el tamaño de la fuente en 15px */
+  font-size: 15px; /* ajusta el tamaño de la fuente según sea necesario */
+  background-color: #121212; /* establece el color de fondo del cuerpo del documento */
+}
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-/* Estilos generales del header */
+::-webkit-scrollbar-track {
+  background: #666;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border-radius: 20px;
+  border: 3px solid #666;
+}
+
+/* estilos generales del header */
 header {
-  background-color: #1a1a1a; /* Establece el color de fondo del encabezado */
-  padding: 20px; /* Define el espaciado interno del encabezado */
-  text-align: center; /* Centra el contenido del encabezado */
+  background-color: #1a1a1a; /* establece el color de fondo del encabezado */
+  padding: 20px; /* define el espaciado interno del encabezado */
+  text-align: center; /* centra el contenido del encabezado */
 }
 
 .navbar {
   display: flex;
-  justify-content: space-between; /* Distribuye horizontalmente los elementos del encabezado */
-  align-items: center; /* Alinea verticalmente los elementos del encabezado */
+  justify-content: space-between; /* distribuye horizontalmente los elementos del encabezado */
+  align-items: center; /* alinea verticalmente los elementos del encabezado */
 }
 
 .title {
-  color: white; /* Establece el color del título */
-  font-size: 36px; /* Define el tamaño del texto del título */
-  cursor: pointer; /* Cambia el cursor al pasar por encima del título */
-  transition: color 0.3s; /* Agrega una transición suave para el cambio de color del título */
+  color: white; /* establece el color del título */
+  font-size: 36px; /* define el tamaño del texto del título */
+  cursor: pointer; /* cambia el cursor al pasar por encima del título */
+  transition: color 0.3s; /* agrega una transición suave para el cambio de color del título */
 }
 
 .title:hover {
-  color: #ccc; /* Cambia el color al pasar el cursor sobre el título */
+  color: #ccc; /* cambia el color al pasar el cursor sobre el título */
 }
 
 .navbar-right ul {
-  list-style-type: none; /* Elimina los puntos de la lista de navegación */
+  list-style-type: none; /* elimina los puntos de la lista de navegación */
   margin: 0;
   padding: 0;
 }
 
 .navbar-right li {
-  display: inline; /* Muestra los elementos de la lista de navegación en línea */
-  margin-left: 10px; /* Define el espacio entre los elementos de la lista de navegación */
+  display: inline; /* muestra los elementos de la lista de navegación en línea */
+  margin-left: 10px; /* define el espacio entre los elementos de la lista de navegación */
 }
 
-/* Estilos de los botones de navegación */
+/* estilos de los botones de navegación */
 .nav-button {
-  background-color: #555; /* Establece el color de fondo inicial de los botones de navegación */
-  border: none; /* Elimina el borde de los botones */
-  color: white; /* Define el color del texto de los botones de navegación */
-  padding: 10px 20px; /* Define el espaciado interno de los botones de navegación */
-  text-align: center; /* Centra el texto de los botones de navegación */
-  text-decoration: none; /* Elimina el subrayado del texto */
-  display: inline-block;
-  font-size: 16px; /* Define el tamaño del texto de los botones de navegación */
-  cursor: pointer; /* Cambia el cursor al pasar por encima de los botones de navegación */
-  border-radius: 5px; /* Agrega bordes redondeados */
-  transition: background-color 0.3s; /* Agrega una transición suave para el cambio de color de fondo */
+  background-color: #555; /* establece el color de fondo inicial de los botones de navegación */
+  border: none; /* sin borde */
+  color: white; /* color del texto de los botones de navegación */
+  padding: 10px 20px; /* espaciado interno de los botones de navegación */
+  text-align: center; /* centra el texto de los botones de navegación */
+  text-decoration: none; /* sin subrayado */
+  display: inline-block; /* muestra los botones de navegación en línea */
+  font-size: 16px; /* tamaño del texto de los botones de navegación */
+  cursor: pointer; /* cambia el cursor al pasar por encima de los botones de navegación */
+  border-radius: 5px; /* borde redondeado */
+  transition: background-color 0.3s; /* transición suave para el cambio de color de fondo */
 }
 
 .nav-button:hover {
-  background-color: #777; /* Cambia el color de fondo al pasar el cursor sobre los botones de navegación */
+  background-color: #777; /* cambio de color de fondo al pasar el cursor sobre los botones de navegación */
 }
 
 .container {
@@ -107,11 +118,11 @@ header {
   justify-content: space-evenly;
   gap: 20px;
   margin: 5%;
-  flex-wrap: wrap; /* Permite que los elementos de la galería se ajusten a diferentes tamaños de pantalla */
+  flex-wrap: wrap; /* permite que los elementos de la galería se ajusten a diferentes tamaños de pantalla */
 }
 
 .card {
-  flex: 0 0 calc(33.333% - 20px); /* Divide el espacio de las tarjetas, para que haya tres por fila en pantallas más grandes */
+  flex: 0 0 calc(33.333% - 20px); /* divide el espacio de las tarjetas, para que haya tres por fila en pantallas más grandes */
   width: 100px;
   height: 100px;
   background-color: transparent;
@@ -121,14 +132,14 @@ header {
   align-items: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  margin-bottom: 20px; /* Define el espacio entre las tarjetas */
+  margin-bottom: 20px; /* define el espacio entre las tarjetas */
 }
 
 .card:hover {
   transform: scale(
     1.05
-  ); /* Aumenta ligeramente el tamaño de la tarjeta al pasar el cursor sobre ella */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Agrega una sombra más pronunciada */
+  ); /* aumenta ligeramente el tamaño de la tarjeta al pasar el cursor sobre ella */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* agrega una sombra más pronunciada */
 }
 
 .card img {
@@ -138,17 +149,17 @@ header {
 
 @media (max-width: 768px) {
   .container {
-    padding: 10px; /* Reduce el relleno del contenedor en pantallas medianas */
+    padding: 10px; /* reduce el relleno del contenedor en pantallas medianas */
   }
 
   .card {
-    flex: 0 0 calc(50% - 20px); /* Para que haya dos tarjetas por fila en pantallas medianas */
+    flex: 0 0 calc(50% - 20px); /* para que haya dos tarjetas por fila en pantallas medianas */
   }
 }
 
 @media (max-width: 480px) {
   .card {
-    flex: 0 0 calc(100% - 20px); /* Para que haya una tarjeta por fila en pantallas pequeñas */
+    flex: 0 0 calc(100% - 20px); /* para que haya una tarjeta por fila en pantallas pequeñas */
   }
 }
 
@@ -168,14 +179,14 @@ footer {
   align-items: center;
   color: #e7dfdf;
   font-size: 18px;
-  margin: 0 0px; /* Agrega margen a ambos lados de la pantalla */
+  margin: 0 0px; /* agrega margen a ambos lados de la pantalla */
 }
 
 .footer-content p {
-  margin: 0; /* Elimina el margen predeterminado del párrafo */
+  margin: 0; /* elimina el margen predeterminado del párrafo */
   font-size: 18px;
   color: #0a0a0a;
-  transition: color 0.3s; /* Agrega una transición de color */
+  transition: color 0.3s; /* agrega una transición de color */
 }
 
 .social-icons .icon {

@@ -1,85 +1,90 @@
-/* Estilos CSS */
+/* estilos css */
 
-/* Resetear los márgenes del cuerpo del documento */
+/* resetear los márgenes del cuerpo del documento */
 body {
-  margin: 0; /* Sin márgenes */
-  font-family: "Roboto", sans-serif; /* Fuente principal */
-  font-weight: 100; /* Peso de la fuente */
-  font-style: normal; /* Estilo de la fuente */
-  /* Establece el tamaño de la fuente en 15px */
-  font-size: 15px; /* Aumenta el tamaño de la fuente según sea necesario */
-  background-color: #121212; /* Color de fondo del cuerpo del documento */
-  background: url(/front/Assets/cool-background.png); /* Imagen de fondo */
+  margin: 0; /* sin márgenes */
+  font-family: "Roboto", sans-serif; /* fuente principal */
+  font-weight: 100; /* peso de la fuente */
+  font-style: normal; /* estilo de la fuente */
+  /* establece el tamaño de la fuente en 15px */
+  font-size: 15px; /* aumenta el tamaño de la fuente según sea necesario */
+  background-color: #121212; /* color de fondo del cuerpo del documento */
+  background: url(/front/Assets/cool-background.png); /* imagen de fondo */
 }
 
-/* Estilos generales del header */
+/* estilos generales del header */
 header {
-  background-color: #1a1a1a; /* Color de fondo del encabezado */
-  padding: 20px; /* Espaciado interno del encabezado */
-  text-align: center; /* Centrado del contenido del encabezado */
+  background-color: #1a1a1a; /* color de fondo del encabezado */
+  padding: 20px; /* espaciado interno del encabezado */
+  text-align: center; /* centrado del contenido del encabezado */
 }
 
+/* estilos de los elementos de navegación */
 .navbar {
   display: flex;
-  justify-content: space-between; /* Distribución horizontal de los elementos del encabezado */
-  align-items: center; /* Alineación vertical de los elementos del encabezado */
+  justify-content: space-between; /* distribución horizontal de los elementos del encabezado */
+  align-items: center; /* alineación vertical de los elementos del encabezado */
 }
 
 .title {
-  color: white; /* Color del título */
-  font-size: 36px; /* Tamaño del texto del título */
-  cursor: pointer; /* Cambia el cursor al pasar por encima */
-  transition: color 0.3s; /* Transición suave para el cambio de color del título */
+  color: white; /* color del título */
+  font-size: 36px; /* tamaño del texto del título */
+  cursor: pointer; /* cambia el cursor al pasar por encima */
+  transition: color 0.3s; /* transición suave para el cambio de color del título */
 }
 
 .title:hover {
-  color: #ccc; /* Cambio de color al pasar el cursor sobre el título */
+  color: #ccc; /* cambio de color al pasar el cursor sobre el título */
 }
 
 .navbar-right ul {
-  list-style-type: none; /* Elimina las viñetas de la lista de navegación */
+  list-style-type: none; /* elimina las viñetas de la lista de navegación */
   margin: 0;
   padding: 0;
 }
 
 .navbar-right li {
-  display: inline; /* Muestra los elementos de la lista de navegación en línea */
-  margin-left: 10px; /* Espacio entre los elementos de la lista de navegación */
+  display: inline; /* muestra los elementos de la lista de navegación en línea */
+  margin-left: 10px; /* espacio entre los elementos de la lista de navegación */
 }
 
-/* Estilos de los botones de navegación */
+/* estilos de los botones de navegación */
 .nav-button {
-  background-color: #555; /* Color de fondo inicial de los botones de navegación */
-  border: none; /* Sin borde */
-  color: white; /* Color del texto de los botones de navegación */
-  padding: 10px 20px; /* Espaciado interno de los botones de navegación */
-  text-align: center; /* Centrado del texto de los botones de navegación */
-  text-decoration: none; /* Sin subrayado */
+  background-color: #555; /* color de fondo inicial de los botones de navegación */
+  border: none; /* sin borde */
+  color: white; /* color del texto de los botones de navegación */
+  padding: 10px 20px; /* espaciado interno de los botones de navegación */
+  text-align: center; /* centrado del texto de los botones de navegación */
+  text-decoration: none; /* sin subrayado */
   display: inline-block;
-  font-size: 16px; /* Tamaño del texto de los botones de navegación */
-  cursor: pointer; /* Cambia el cursor al pasar por encima de los botones de navegación */
-  border-radius: 5px; /* Borde redondeado */
-  transition: background-color 0.3s; /* Transición suave para el cambio de color de fondo */
+  font-size: 16px; /* tamaño del texto de los botones de navegación */
+  cursor: pointer; /* cambia el cursor al pasar por encima de los botones de navegación */
+  border-radius: 5px; /* borde redondeado */
+  transition: background-color 0.3s; /* transición suave para el cambio de color de fondo */
 }
 
 .nav-button:hover {
-  background-color: #777; /* Cambio de color de fondo al pasar el cursor sobre los botones de navegación */
+  background-color: #777; /* cambio de color de fondo al pasar el cursor sobre los botones de navegación */
 }
 
+/* contenedor principal */
 .container {
-  margin: 100px; /* Margen exterior */
+  margin: 100px; /* margen exterior */
   display: flex;
   justify-content: space-evenly;
-  padding: 20px; /* Espaciado interno */
+  padding: 20px; /* espaciado interno */
 }
 
+/* galería de imágenes */
 .gallery {
   display: flex;
-  flex-wrap: wrap; /* Permite que los elementos de la galería se ajusten a la línea */
-  gap: 20px; /* Espacio entre elementos de la galería */
-  animation: move 5s infinite alternate; /* Animación de la galería */
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px; /* espacio entre elementos de la galería */
+  animation: move 5s infinite alternate; /* animación de la galería */
 }
 
+/* animación de la galería */
 @keyframes move {
   0% {
     transform: translate3d(0, 0, 0);
@@ -98,89 +103,101 @@ header {
   }
 }
 
+/* tarjetas de la galería */
 .card {
-  width: 100px; /* Ancho de las tarjetas */
-  height: 100px; /* Alto de las tarjetas */
-  background-color: #fff; /* Color de fondo de las tarjetas */
-  border-radius: 10px; /* Borde redondeado */
+  width: 100px; /* ancho de las tarjetas */
+  height: 100px; /* alto de las tarjetas */
+  background-color: #fff; /* color de fondo de las tarjetas */
+  border-radius: 10px; /* borde redondeado */
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
-  transition: all 0.3s ease; /* Transición suave para todos los cambios */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* sombra */
+  transition: all 0.3s ease; /* transición suave para todos los cambios */
 }
 
+/* efecto al pasar el cursor sobre las tarjetas */
 .card:hover {
-  transform: scale(1.05); /* Escala al pasar el cursor sobre las tarjetas */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra aumentada */
+  transform: scale(1.05); /* escala al pasar el cursor sobre las tarjetas */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* sombra aumentada */
 }
 
+/* efecto de rotación de la imagen al pasar el cursor */
 .card:hover img {
-  animation: spin 0.5s linear infinite; /* Animación de rotación de la imagen al pasar el cursor */
+  animation: spin 0.5s linear infinite;
 }
 
+/* animación de rotación */
 @keyframes spin {
   100% {
-    transform: rotate(360deg); /* Rotación completa */
+    transform: rotate(360deg); /* rotación completa */
   }
 }
 
+/* imágenes dentro de las tarjetas */
 img {
-  width: 70px; /* Ancho de las imágenes */
-  height: 60px; /* Alto de las imágenes */
+  width: 80px; /* ancho de las imágenes */
+  height: 80px; /* alto de las imágenes */
 }
 
+/* recomendación */
 .recommendation {
   text-align: center;
-  margin-top: 200px; /* Margen superior */
+  margin-top: 200px; /* margen superior */
 }
 
 .recommendation p {
-  font-size: 30px; /* Tamaño del texto */
-  color: #e9e3e3; /* Color del texto */
-  font-weight: bold; /* Peso de la fuente */
+  font-size: 30px; /* tamaño del texto */
+  color: #e9e3e3; /* color del texto */
+  font-weight: bold; /* peso de la fuente */
 }
 
+/* media queries */
 @media (max-width: 768px) {
+  /* cambia la dirección de la galería a columna en pantallas más pequeñas */
   .gallery {
-    flex-direction: column; /* Cambia la dirección de la galería a columna */
-    align-items: center; /* Centra los elementos de la galería */
+    flex-direction: column;
+    align-items: center; /* centra los elementos */
   }
 }
 
+/* pie de página */
 footer {
-  background-color: #1a1a1a; /* Color de fondo del pie de página */
-  padding: 10px; /* Espaciado interno */
-  position: fixed; /* Posición fija */
-  bottom: 0; /* En la parte inferior */
-  left: 0; /* A la izquierda */
-  width: 100%; /* Ancho completo */
+  background-color: #1a1a1a; /* color de fondo del pie de página */
+  padding: 10px; /* espaciado interno */
+  position: fixed; /* posición fija */
+  bottom: 0; /* en la parte inferior */
+  left: 0; /* a la izquierda */
+  width: 100%; /* ancho completo */
   height: 9%;
-  box-sizing: border-box; /* El tamaño incluye el borde */
-  border-top: 1px solid #131212; /* Borde superior */
+  box-sizing: border-box; /* el tamaño incluye el borde */
+  border-top: 1px solid #131212; /* borde superior */
   display: flex;
   font-size: 18px;
   color: #e7dfdf;
-  justify-content: space-between; /* Distribución horizontal */
-  align-items: center; /* Alineación vertical */
-  margin: 0 0px; /* Margen a ambos lados de la pantalla */
+  justify-content: space-between; /* distribución horizontal */
+  align-items: center; /* alineación vertical */
+  margin: 0 0px; /* margen a ambos lados de la pantalla */
 }
 
+/* contenido del pie de página */
 .footer-content p {
-  margin: 0; /* Elimina el margen predeterminado del párrafo */
-  font-size: 18px; /* Tamaño del texto */
-  color: #0a0a0a; /* Color del texto */
-  transition: color 0.3s; /* Agrega una transición de color */
+  margin: 0; /* elimina el margen predeterminado del párrafo */
+  font-size: 18px; /* tamaño del texto */
+  color: #0a0a0a; /* color del texto */
+  transition: color 0.3s; /* transición de color */
 }
 
+/* iconos sociales */
 .social-icons .icon {
-  color: #e7dfdf; /* Color de los íconos sociales */
-  font-size: 20px; /* Tamaño de los íconos */
-  margin-left: 10px; /* Margen izquierdo */
-  transition: color 0.3s, transform 0.3s; /* Transiciones suaves para color y transformación */
+  color: #e7dfdf; /* color de los íconos sociales */
+  font-size: 20px; /* tamaño de los íconos */
+  margin-left: 10px; /* margen izquierdo */
+  transition: color 0.3s, transform 0.3s; /* transiciones suaves para color y transformación */
 }
 
+/* efecto al pasar el cursor sobre los íconos sociales */
 .social-icons .icon:hover {
-  color: #007bff; /* Cambio de color al pasar el cursor */
-  transform: scale(1.2); /* Aumenta el tamaño al pasar el cursor */
+  color: #007bff; /* cambio de color al pasar el cursor */
+  transform: scale(1.2); /* aumenta el tamaño al pasar el cursor */
 }

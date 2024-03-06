@@ -1,17 +1,17 @@
-// Primero, obtenemos el contenedor donde vamos a mostrar las tarjetas de películas
+// vamos a buscar donde poner las tarjetas de películas
 const tarjetasContainer = document.getElementById("tarjetas-container");
 
-// Luego, hacemos una solicitud HTTP GET para obtener datos de películas desde una URL
+// ahora, hacemos una solicitud para obtener información de películas desde una URL
 $.get("https://students-api.2.us-1.fl0.io/movies", function (data) {
-  // Verificamos si la solicitud fue exitosa
+  // chequeamos si la solicitud funcionó
   if (Array.isArray(data)) {
-    // Si la solicitud fue exitosa, recorremos los datos y creamos tarjetas para cada película
+    // si funcionó, recorremos la información y creamos una tarjeta para cada película
     data.forEach((movie) => {
-      // Creamos un elemento de tarjeta
+      // aquí creamos una tarjeta
       const card = document.createElement("div");
       card.classList.add("card");
 
-      // Construimos el contenido de la tarjeta utilizando los datos de la película
+      // aquí configuramos el contenido de la tarjeta utilizando la información de la película
       const cardContent = `
                 <div class="card__front">
                     <img src="${movie.poster}" alt="${
@@ -20,24 +20,78 @@ $.get("https://students-api.2.us-1.fl0.io/movies", function (data) {
                 </div>
                 <div class="card__content">
                     <h2 class="card__title">${movie.title}</h2>
-                    <p class="card__description">Year: ${movie.year}</p>
+                    <p class="card__description">Año: ${movie.year}</p>
                     <p class="card__description">Director: ${movie.director}</p>
-                    <p class="card__description">Duration: ${movie.duration}</p>
-                    <p class="card__description">Genre: ${movie.genre.join(
+                    <p class="card__description">Duración: ${movie.duration}</p>
+                    <p class="card__description">Género: ${movie.genre.join(
                       ", "
                     )}</p>
-                    <p class="card__description">Rate: ${movie.rate}</p>
+                    <p class="card__description">Puntuación: ${movie.rate}</p>
                 </div>
             `;
 
-      // Insertamos el contenido en la tarjeta
+      // insertamos el contenido en la tarjeta
       card.innerHTML = cardContent;
 
-      // Agregamos la tarjeta al contenedor
+      // añadimos la tarjeta al contenedor
       tarjetasContainer.appendChild(card);
     });
   } else {
-    // Si no se pudieron obtener los datos, mostramos un mensaje de error en la consola
+    // si algo salió mal, mostramos un mensaje de error en la consola
     console.error("Error: No se pudieron obtener los datos de las películas.");
   }
+});
+
+// ahora, vamos a buscar los contenedores para las tarjetas de estrenos y recomendados
+const estrenosContainer = document.getElementById("estrenos-container");
+const recomendadosContainer = document.getElementById("recomendados-container");
+
+// esta función crea las tarjetas de películas
+function crearTarjetas(container, data) {
+  // chequeamos si la solicitud funcionó
+  if (Array.isArray(data)) {
+    // si funcionó, recorremos la información y creamos una tarjeta para cada película
+    data.forEach((movie) => {
+      // aquí creamos una tarjeta
+      const card = document.createElement("div");
+      card.classList.add("card");
+
+      // aquí configuramos el contenido de la tarjeta utilizando la información de la película
+      const cardContent = `
+                <div class="card__front">
+                    <img src="${movie.poster}" alt="${
+        movie.title
+      }" class="movie-poster">
+                </div>
+                <div class="card__content">
+                    <h2 class="card__title">${movie.title}</h2>
+                    <p class="card__description">Año: ${movie.year}</p>
+                    <p class="card__description">Director: ${movie.director}</p>
+                    <p class="card__description">Duración: ${movie.duration}</p>
+                    <p class="card__description">Género: ${movie.genre.join(
+                      ", "
+                    )}</p>
+                    <p class="card__description">Puntuación: ${movie.rate}</p>
+                </div>
+            `;
+
+      // insertamos el contenido en la tarjeta
+      card.innerHTML = cardContent;
+
+      // añadimos la tarjeta al contenedor
+      container.appendChild(card);
+    });
+  } else {
+    // si algo salió mal, mostramos un mensaje de error en la consola
+    console.error("Error: No se pudieron obtener los datos de las películas.");
+  }
+}
+
+// hacemos otra solicitud para obtener información de películas desde una URL
+$.get("https://students-api.2.us-1.fl0.io/movies", function (data) {
+  // creamos tarjetas para la sección de estrenos
+  crearTarjetas(estrenosContainer, data);
+
+  // creamos tarjetas para la sección de recomendados
+  crearTarjetas(recomendadosContainer, data);
 });
