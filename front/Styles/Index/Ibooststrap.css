@@ -1,0 +1,196 @@
+/* Media query para pantallas con ancho máximo de 400px */
+@media screen and (max-width: 400px) {
+  /* Ajusta el tamaño de fuente del párrafo dentro de la clase "overlay" a 18px */
+  .overlay p {
+    font-size: 18px;
+  }
+
+  /* Ajusta el tamaño de fuente del ícono dentro de la clase "overlay" a 40px */
+  .overlay i {
+    font-size: 40px;
+  }
+}
+
+/* Media query para pantallas con ancho máximo de 767px */
+@media screen and (max-width: 767px) {
+  /* Oculta el elemento con la clase "navbar-brand" */
+  .navbar-brand {
+    display: none;
+  }
+}
+
+/* Media query para pantallas con ancho máximo de 800px */
+@media screen and (max-width: 800px) {
+  /* Ajusta la altura y el ancho de las imágenes dentro de la clase "testimonio-imagen" */
+  .testimonio-imagen {
+    height: 120px;
+    width: 120px;
+  }
+
+  /* Ajusta el tamaño de fuente del texto dentro de la clase "testimonio-texto" a 18px */
+  .testimonio-texto {
+    font-size: 18px;
+  }
+}
+
+/* Media query para pantallas con ancho mínimo de 700px */
+@media screen and (min-width: 700px) {
+  /* Establece el ancho máximo de las imágenes dentro de la clase "hero-inferior-imagen" a 600px */
+  .hero-inferior-imagen {
+    max-width: 600px;
+  }
+}
+
+/* Estilo para el elemento con id "preload" */
+#preload {
+  display: none;
+}
+
+/* Estilo para las imágenes dentro del elemento con id "preload" */
+#preload img {
+  display: none;
+}
+
+/* Estilos generales para el cuerpo (body) del documento */
+body {
+  /* Color de fondo */
+  background-color: #121212;
+
+  /* Agrega un scrollbar vertical al cuerpo */
+  overflow-y: scroll;
+
+  /* Ancho del scrollbar */
+  scrollbar-width: thin;
+
+  /* Color del scrollbar */
+  scrollbar-color: #888 #121212;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Estilos para las imágenes dentro de la etiqueta "header" */
+header img {
+  /* Ancho y alto del 10% de la ventana */
+  width: 10%;
+  height: 10%;
+
+  /* Bordes redondeados */
+  border-radius: 8%;
+
+  /* Muestra el elemento como inline */
+  display: inline;
+
+  /* Transición suave en color y transformación */
+  transition: color 0.3s, transform 0.3s;
+}
+
+/* Estilos para las imágenes dentro de los elementos con clase "carousel-item" */
+.carousel-item img {
+  /* Ancho y alto del 80% de la ventana */
+  width: 80%;
+  height: 80%;
+}
+
+/* Estilos para el pseudo-elemento "::before" de las imágenes dentro de "carousel-item" al pasar el cursor sobre ellas */
+.carousel-item img:hover::before {
+  /* Aumenta la opacidad del pseudo-elemento */
+  opacity: 1;
+}
+
+/* Estilos para el elemento "footer" */
+footer {
+  /* Fija el footer en la parte inferior */
+  position: static;
+
+  /* Color de fondo */
+  background-color: #121212;
+}
+
+/* Estilos para el logotipo dentro de la clase "footer-logo" */
+.footer-logo {
+  /* Altura y ancho de 100px */
+  height: 100px;
+  width: 100px;
+
+  /* Márgenes y bordes redondeados */
+  margin: 10px;
+  border-radius: 4%;
+}
+
+/* Estilos para el texto dentro de la clase "footer-texto" */
+.footer-texto {
+  /* Tamaño de fuente de 1.5rem */
+  font-size: 1.5rem;
+
+  /* Relleno, margen inferior y fuente específica */
+  padding: 20px;
+  margin-bottom: 30px;
+  font-family: "Quicksand", sans-serif;
+}
+
+/* Estilos para los iconos de redes sociales dentro de la clase "iconos-redes-sociales" */
+.iconos-redes-sociales a {
+  /* Dimensiones, alineación y espaciado */
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 2px;
+  margin: 10px;
+
+  /* Bordes y transición suave */
+  border: 2px solid white;
+  border-radius: 50%;
+  transition: all 0.2s ease-in;
+}
+
+/* Estilos para los íconos dentro de los elementos de "iconos-redes-sociales" */
+.iconos-redes-sociales i {
+  /* Color blanco y tamaño de fuente de 1rem */
+  color: white;
+  font-size: 1rem;
+
+  /* Transición suave */
+  transition: all 0.2s ease-in;
+}
+
+/* Estilos al pasar el cursor sobre los elementos de "iconos-redes-sociales" */
+.iconos-redes-sociales a:hover {
+  /* Fondo blanco y borde con color específico */
+  background-color: white;
+  border: 2px solid rgb(13, 110, 253);
+}
+
+/* Estilos al pasar el cursor sobre los íconos dentro de "iconos-redes-sociales" */
+.iconos-redes-sociales a:hover i {
+  /* Cambia el color del ícono a negro */
+  color: black;
+}
+
+/* Estilos para el texto con clase "derechos-de-autor" */
+.derechos-de-autor {
+  /* Tamaño de fuente, color y relleno */
+  font-size: 15px;
+  color: #aeaeae;
+  padding: 20px;
+}
+
+/* Estilos para el scrollbar en navegadores WebKit (Chrome, Safari) */
+::-webkit-scrollbar {
+  /* Ancho del scrollbar */
+  width: 10px;
+}
+
+/* Estilos para la pista del scrollbar en navegadores WebKit */
+::-webkit-scrollbar-track {
+  /* Color de fondo */
+  background: #666;
+}
+
+/* Estilos para el pulgar (scroll handle) del scrollbar en navegadores WebKit */
+::-webkit-scrollbar-thumb {
+  /* Color del pulgar y bordes redondeados */
+  background-color: #333;
+  border-radius: 20px;
+  border: 3px solid #666;
+}

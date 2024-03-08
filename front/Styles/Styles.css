@@ -5,7 +5,10 @@ body {
   font-weight: 100;
   font-style: normal;
   font-size: 15px;
-  background-color: #121212;
+  background-image: url(/front/Assets/body/Shiny\ Overlay.svg);
+  background-size: cover; /* Ajusta la imagen para cubrir todo el cuerpo */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen en el cuerpo */
   overflow-y: scroll; /* Agrega un scrollbar vertical al cuerpo */
   scrollbar-width: thin; /* Ancho del scrollbar */
   scrollbar-color: #888 #121212; /* Color del scrollbar */
@@ -32,26 +35,6 @@ h2 {
   margin-top: 30px;
   font-size: 40px;
   animation: fadeIn 1s ease, changeColor 2s infinite alternate;
-}
-
-/* Definición de la animación de entrada */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Definición de la animación de cambio de color */
-@keyframes changeColor {
-  from {
-    color: white;
-  }
-  to {
-    color: #3d57eb;
-  }
 }
 
 /* Estilos generales del header */
@@ -239,6 +222,31 @@ header {
 
 main {
   margin-bottom: 10%; /* Agrega un margen inferior al main */
+}
+.container {
+  text-align: center;
+}
+
+.beta {
+  max-width: 800px; /* Ajusta el ancho máximo según tus necesidades */
+  margin: 0 auto; /* Centra el contenido dentro del contenedor */
+}
+.beta p {
+  font-size: 1.5em; /* Ajusta el tamaño de la fuente del párrafo según tus necesidades */
+  color: white;
+}
+
+.icon-link img {
+  max-width: 40%; /* Hace la imagen responsive */
+  height: auto; /* Ajusta la altura automáticamente */
+  border-radius: 10%;
+  transition: transform 0.1s ease-in-out; /* Agrega una transición suave */
+}
+
+.icon-link:hover img {
+  transform: scale(
+    0.9
+  ); /* Reduce el tamaño al pasar el ratón sobre la imagen */
 }
 
 /* Estilos para el pie de página */

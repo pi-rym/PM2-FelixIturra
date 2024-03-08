@@ -5,7 +5,10 @@ body {
   font-weight: 100; /* define el peso de la fuente */
   font-style: normal; /* establece el estilo de la fuente como normal */
   font-size: 15px; /* establece el tamaño de la fuente en 15px */
-  background-color: #121212; /* color de fondo del cuerpo del documento */
+    background-image: url(/front/Assets/body/Shiny\ Overlay.svg);
+  background-size: cover; /* Ajusta la imagen para cubrir todo el cuerpo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en el cuerpo */
 }
 
 /* barras de desplazamiento */

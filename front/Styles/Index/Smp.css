@@ -6,7 +6,10 @@ body {
   font-style: normal; /* define el estilo de la fuente */
   /* establece el tamaño de la fuente en 15px */
   font-size: 15px; /* ajusta el tamaño de la fuente según sea necesario */
-  background-color: #121212; /* establece el color de fondo del cuerpo del documento */
+   background-image: url(/front/Assets/body/Shiny\ Overlay.svg);
+  background-size: cover; /* Ajusta la imagen para cubrir todo el cuerpo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en el cuerpo */
 }
 ::-webkit-scrollbar {
   width: 10px;
