@@ -66,7 +66,9 @@ body {
   scrollbar-color: #888 #121212;
   font-family: "Roboto", sans-serif;
 }
-
+header {
+  background-color: #121212;
+}
 /* Estilos para las imágenes dentro de la etiqueta "header" */
 header img {
   /* Ancho y alto del 10% de la ventana */
@@ -137,7 +139,7 @@ footer {
   justify-content: space-evenly;
   padding: 2px;
   margin: 10px;
-
+  background-color: #121212;
   /* Bordes y transición suave */
   border: 2px solid white;
   border-radius: 50%;

@@ -3,25 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Proyecto M2</title>
-    <link rel="stylesheet" href="Styles/Reset.css" />
-    <link rel="stylesheet" href="Styles/Styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="icon" href="/" />
+    <title>CodeFilms</title>
+    <link rel="stylesheet" href="Styles/Css/Reset.css" />
+    <link rel="stylesheet" href="Styles/Css/Styles.css" />
+    <script
+      src="https://kit.fontawesome.com/4d6c2c7ed0.js"
+      crossorigin="anonymous"></script>
+    <script defer src="/your-path-to-fontawesome/js/brands.js"></script>
+    <script defer src="/your-path-to-fontawesome/js/solid.js"></script>
+    <script defer src="/your-path-to-fontawesome/js/fontawesome.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      integrity="sha512-cM5HjxkI8I6DwTkZHwD0ULkzp5W9WjQunl8xRwLwX+M75JTPU8SYBSIgW67RKjP7Ef7NdLL5rCmr2/crjJKdRw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer" />
-    <link
-      rel="stylesheet"
-      href="/front/Assets/icon redes/fontawesome-free-6.5.1-web/css/all.css" />
+    <link rel="icon" href="/Assets/IconsMarca/Funimation-Emblem.png" />
   </head>
   <body>
     <header>
@@ -30,20 +24,20 @@
         <div class="navbar-right">
           <ul>
             <li>
-              <a href="/front/index.html" class="nav-button">Home</a>
+              <a href="index.html" class="nav-button">Home</a>
             </li>
             <li>
-              <a href="/front/Styles/Index/Smp.html" class="nav-button"
+              <a href="Styles/Index/Smp.html" class="nav-button"
                 >Sobre mi proyecto</a
               >
             </li>
             <li>
-              <a href="/front/Styles/Index/Hdc.html" class="nav-button"
+              <a href="Styles/Index/Hdc.html" class="nav-button"
                 >Historia del cine</a
               >
             </li>
             <li>
-              <a href="/front/Styles/Index/Wr.html" class="nav-button"
+              <a href="Styles/Index/Wr.html" class="nav-button"
                 >Webs recomendadas</a
               >
             </li>
@@ -51,7 +45,7 @@
         </div>
       </div>
     </header>
-    <br /><br /><br /><br />
+
     <main>
       <h2>Lo mas visto</h2>
       <div id="tarjetas-container" class="card-container"></div>
@@ -63,25 +57,21 @@
         <h2>Recomendados</h2>
         <div id="recomendados-container" class="card-container"></div>
       </section>
-</main>
 
-<main id="#prox" class="container">
-  <section class="beta">
+      <section class="beta">
         <p>
-        Descubre el futuro ahora! Únete a la beta de nuestra nueva
-        plataforma y sé pionero en la revolución digital. Experimenta lo
-        último en innovación y funcionalidades avanzadas. ¡Regístrate hoy
-        para ser parte de la vanguardia! #BetaRevolution
-      </p>
-
-           <div class="icon-link">
-        <a href="/front/Styles/Index/Ibootstrapr.html">
-          <img src="/front/Assets/IconsMarca/Funimation-Emblem.png" alt="Icono">
-        </a>
-      </div>
-
-  </section>
-<main>
+          Descubre el futuro ahora! Únete a la beta de nuestra nueva plataforma
+          y sé pionero en la revolución digital. Experimenta lo último en
+          innovación y funcionalidades avanzadas. ¡Regístrate hoy para ser parte
+          de la vanguardia! #BetaRevolution
+        </p>
+        <div class="icon-link">
+          <a href="/Styles/Index/Ibootstrapr.html">
+            <img src="/Assets/IconsMarca/Funimation-Emblem.png" alt="Icono" />
+          </a>
+        </div>
+      </section>
+    </main>
 
     <footer>
       <p>&copy;<strong>2024 CodeFilms</strong></p>
@@ -107,6 +97,7 @@
       </div>
     </footer>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./scripts/tempData.js"></script>
     <script src="./scripts/index.js"></script>
   </body>

@@ -1,0 +1,184 @@
+/* estilos generales */
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 15px;
+  background-image: url(/Assets/body/Shiny\ Overlay.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #121212;
+}
+
+/* barras de desplazamiento */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #666;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border-radius: 20px;
+  border: 3px solid #666;
+}
+
+/* estilos generales del encabezado */
+header {
+  background-color: #1a1a1a;
+  padding: 20px;
+  text-align: center;
+}
+
+/* barra de navegación */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* título del encabezado */
+.title {
+  color: white;
+  font-size: 36px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.title:hover {
+  color: #ccc;
+}
+
+/* elementos de la lista de navegación */
+.navbar-right ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-right li {
+  display: inline;
+  margin-left: 10px;
+}
+
+/* botones de navegación */
+.nav-button {
+  background-color: #555;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+  background-color: #777;
+}
+
+/* títulos y contenido */
+h1 {
+  text-align: center;
+  font-size: 29px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+main {
+  margin: 10%;
+  color: #fff;
+}
+
+main p {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 15px;
+  font-size: larger;
+}
+
+/* contenedor de las imágenes */
+.imge {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* tarjetas de película */
+.card {
+  flex: 1 0 200px;
+  margin: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover img {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.card-details {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .card-details {
+  opacity: 1;
+}
+
+/* estilos para dispositivos móviles */
+@media (max-width: 600px) {
+  .card {
+    flex: 1 0 100%;
+  }
+}
+
+footer {
+  background-color: #1a1a1a;
+  padding: 3px;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  height: 3%;
+  width: 100%;
+  margin: 0; /* Elimina cualquier margen */
+  box-sizing: border-box;
+  border-top: 1px solid #131212;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-icons .icon {
+  color: #e7dfdf;
+  margin: 5px;
+  font-size: 20px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons .icon:hover {
+  color: #007bff;
+  transform: scale(1.2);
+}

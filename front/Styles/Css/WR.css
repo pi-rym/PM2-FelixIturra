@@ -9,7 +9,26 @@ body {
   /* establece el tamaño de la fuente en 15px */
   font-size: 15px; /* aumenta el tamaño de la fuente según sea necesario */
   background-color: #121212; /* color de fondo del cuerpo del documento */
-  background: url(/front/Assets/cool-background.png); /* imagen de fondo */
+  background-image: url(/Assets/body/Shiny\ Overlay.svg); /* imagen de fondo */
+  background-size: cover; /* Ajusta la imagen para cubrir todo el cuerpo */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  overflow-y: scroll; /* Agrega un scrollbar vertical al cuerpo */
+  scrollbar-width: thin; /* Ancho del scrollbar */
+  scrollbar-color: #888 #121212; /* Color del scrollbar */
+  background-position: center; /* Centra la imagen en el cuerpo */
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #666;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border-radius: 20px;
+  border: 3px solid #666;
 }
 
 /* estilos generales del header */
@@ -72,7 +91,7 @@ header {
   margin: 100px; /* margen exterior */
   display: flex;
   justify-content: space-evenly;
-  padding: 20px; /* espaciado interno */
+  padding: 100px; /* espaciado interno */
 }
 
 /* galería de imágenes */
@@ -161,43 +180,30 @@ img {
   }
 }
 
-/* pie de página */
 footer {
-  background-color: #1a1a1a; /* color de fondo del pie de página */
-  padding: 10px; /* espaciado interno */
-  position: fixed; /* posición fija */
-  bottom: 0; /* en la parte inferior */
-  left: 0; /* a la izquierda */
-  width: 100%; /* ancho completo */
-  height: 9%;
-  box-sizing: border-box; /* el tamaño incluye el borde */
-  border-top: 1px solid #131212; /* borde superior */
+  background-color: #1a1a1a;
+  padding: 3px;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  height: 4%;
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 1px solid #131212;
   display: flex;
-  font-size: 18px;
-  color: #e7dfdf;
-  justify-content: space-between; /* distribución horizontal */
-  align-items: center; /* alineación vertical */
-  margin: 0 0px; /* margen a ambos lados de la pantalla */
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0px;
 }
 
-/* contenido del pie de página */
-.footer-content p {
-  margin: 0; /* elimina el margen predeterminado del párrafo */
-  font-size: 18px; /* tamaño del texto */
-  color: #0a0a0a; /* color del texto */
-  transition: color 0.3s; /* transición de color */
-}
-
-/* iconos sociales */
 .social-icons .icon {
-  color: #e7dfdf; /* color de los íconos sociales */
-  font-size: 20px; /* tamaño de los íconos */
-  margin-left: 10px; /* margen izquierdo */
-  transition: color 0.3s, transform 0.3s; /* transiciones suaves para color y transformación */
+  color: #e7dfdf;
+  font-size: 20px;
+  margin-left: 10px;
+  transition: color 0.3s, transform 0.3s;
 }
 
-/* efecto al pasar el cursor sobre los íconos sociales */
 .social-icons .icon:hover {
-  color: #007bff; /* cambio de color al pasar el cursor */
-  transform: scale(1.2); /* aumenta el tamaño al pasar el cursor */
+  color: #007bff;
+  transform: scale(1.2);
 }
