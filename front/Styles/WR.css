@@ -9,7 +9,7 @@ body {
   /* establece el tamaño de la fuente en 15px */
   font-size: 15px; /* aumenta el tamaño de la fuente según sea necesario */
   background-color: #121212; /* color de fondo del cuerpo del documento */
-  background-image: url(/Assets/body/Shiny\ Overlay.svg); /* imagen de fondo */
+  background-image: url(/front/Assets/body/Shiny\ Overlay.svg); /* imagen de fondo */
   background-size: cover; /* Ajusta la imagen para cubrir todo el cuerpo */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   overflow-y: scroll; /* Agrega un scrollbar vertical al cuerpo */
