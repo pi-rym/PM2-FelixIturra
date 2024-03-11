@@ -1,6 +1,6 @@
-// Exportamos la función crearTarjetas para que pueda ser importada en index.js
+// exportamos la función crearTarjetas para que se pueda usar en index.js
 export function crearTarjetas(container, data) {
-  // chequeamos si la solicitud funcionó
+  // revisamos si la solicitud funcionó
   if (Array.isArray(data)) {
     // si funcionó, recorremos la información y creamos una tarjeta para cada película
     data.forEach((movie) => {
