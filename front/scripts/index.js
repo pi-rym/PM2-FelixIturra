@@ -1,21 +1,36 @@
-// importamos la función crearTarjetas desde card.js
+// importamos una funcion especial llamada 'crearTarjetas' desde otro archivo llamado 'card.js'.
 import { crearTarjetas } from "./card.js";
 
-// en esta parte vamos a crear tarjetas de películas para distintas secciones
+// usamos 'axios' para hacer pedidos de datos desde otra parte de Internet.
+const axios = require("axios");
+
+// aqui estamos buscando en el código HTML los lugares donde queremos mostrar las tarjetas de pelis.
+// uno es para las pelis recien estrenadas, otro para las recomendadas y otro para todas las demás.
 const contenedorEstrenos = document.getElementById("estrenos-container");
 const contenedorRecomendados = document.getElementById(
   "recomendados-container"
 );
 const contenedorTarjetas = document.getElementById("tarjetas-container");
 
-// hacemos una solicitud para obtener información de películas desde una URL
-$.get("https://students-api.2.us-1.fl0.io/movies", function (data) {
-  // creamos tarjetas para la sección de estrenos
-  crearTarjetas(contenedorEstrenos, data);
+// ahora vamos a pedirle a Internet info sobre pelis.
+axios
+  .get("https://students-api.2.us-1.fl0.io/movies")
+  // cuando obtengamos la info con exito, vamos a hacer algunas cosas con esos datos.
+  .then((response) => {
+    // guardamos los datos de las pelis en una variable llamada 'data'.
+    const data = response.data;
 
-  // creamos tarjetas para la sección de recomendados
-  crearTarjetas(contenedorRecomendados, data);
+    // luego, usamos esos datos para crear tarjetas de pelis y mostrarlas en diferentes lugares de la pagina.
+    // primero, creamos tarjetas para pelis recién estrenadas.
+    crearTarjetas(contenedorEstrenos, data);
 
-  // creamos tarjetas para el contenedor principal
-  crearTarjetas(contenedorTarjetas, data);
-});
+    //creamos tarjetas para pelis recomendadas.
+    crearTarjetas(contenedorRecomendados, data);
+
+    // creamos tarjetas para todas las demás pelis.
+    crearTarjetas(contenedorTarjetas, data);
+  })
+  // si algo sale mal mientras obtenemos los datos, mostramos un mensaje de error en la consola.
+  .catch((error) => {
+    console.error("Error al obtener datos de pelis:", error);
+  });
