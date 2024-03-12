@@ -1,5 +1,3 @@
-
-
 // importamos una función especial llamada 'crearTarjetas' desde otro archivo llamado 'card.js'.
 import { crearTarjetas } from "./card.js";
 
