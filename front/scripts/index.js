@@ -1,10 +1,10 @@
-// importamos una función especial llamada 'crearTarjetas' desde otro archivo llamado 'card.js'.
+// importamos una funcion especial llamada 'crearTarjetas' desde otro archivo llamado 'card.js'.
 import { crearTarjetas } from "./card.js";
 
 // usamos una herramienta que se llama 'axios' para hacer pedidos de datos desde otra parte de Internet.
 const axios = require("axios");
 
-// aquí estamos buscando en el código HTML los lugares donde queremos mostrar las tarjetas de pelis.
+// aqu estamos buscando en el codigo HTML los lugares donde queremos mostrar las tarjetas de pelis.
 // uno es para las pelis recién estrenadas, otro para las recomendadas y otro para todas las demás.
 const contenedorEstrenos = document.getElementById("estrenos-container");
 const contenedorRecomendados = document.getElementById(
