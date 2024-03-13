@@ -1,17 +1,22 @@
-// aquí estamos importando la librería express, que nos permite crear nuestro servidor web
 const express = require("express");
-// creamos una instancia de la aplicación express, que es como nuestro servidor
+const morgan = require("morgan");
+const cors = require("cors");
+const movieService = require("./services/movieService");
+
 const app = express();
-// importamos el enrutador de películas que definimos en otro archivo
-const moviesRouter = require("./routes/movies");
 
-// le decimos a nuestra aplicación que utilice el enrutador de películas cuando se acceda a la ruta "/movies"
-app.use("/movies", moviesRouter);
+app.use(morgan("dev"));
+app.use(cors());
+app.use(express.json());
 
-// importamos el controlador de películas que también definimos en otro archivo
-const moviesController = require("./controllers/moviesController");
-// configuramos nuestra aplicación para que cuando alguien acceda a la ruta "/movies" se ejecute el método getMovies del controlador
-app.get("/movies", moviesController.getMovies);
+app.get("/movies", async (req, res) => {
+  try {
+    const movies = await movieService.getMovies();
+    res.status(200).json(movies);
+  } catch (error) {
+    console.error("Error al obtener películas:", error);
+    res.status(500).json({ error: "Error al obtener películas" });
+  }
+});
 
-// exportamos nuestra aplicación para poder usarla en otros archivos, como en el index.js
 module.exports = app;
