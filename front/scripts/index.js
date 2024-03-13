@@ -14,7 +14,7 @@ const contenedorTarjetas = document.getElementById("tarjetas-container");
 
 // ahora vamos a pedirle a Internet info sobre pelis.
 axios
-  .get("https://http://localhost:3000/movies/")
+  .get("http://localhost:3000/movies/")
   // cuando obtengamos la info con éxito, vamos a hacer algunas cosas con esos datos.
   .then((response) => {
     // guardamos los datos de las pelis en una variable llamada 'data'.
