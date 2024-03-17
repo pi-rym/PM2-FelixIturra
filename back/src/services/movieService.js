@@ -1,14 +1,14 @@
-const axios = require("axios");
+const Movie = require("../models/movieModel");
 
 async function getMovies() {
   try {
-    const response = await axios.get(
-      "https://students-api.up.railway.app/movies"
-    );
-    return response.data;
+    const movies = await Movie.find();
+    return movies;
   } catch (error) {
-    console.error("Error al obtener datos de películas:", error);
-    return [];
+    throw new Error(
+      "Error al obtener las películas de la base de datos:",
+      error
+    );
   }
 }
 

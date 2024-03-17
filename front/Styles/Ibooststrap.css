@@ -89,7 +89,7 @@ header img {
 .carousel-item img {
   /* Ancho y alto del 80% de la ventana */
   width: 80%;
-  height: 80%;
+  height: 10%;
 }
 
 /* Estilos para el pseudo-elemento "::before" de las imágenes dentro de "carousel-item" al pasar el cursor sobre ellas */
