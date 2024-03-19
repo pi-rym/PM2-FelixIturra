@@ -1,0 +1,202 @@
+/* Añade aquí tus estilos CSS */
+/* Resetear los márgenes del cuerpo del documento */
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 15px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #666;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border-radius: 20px;
+  border: 3px solid #666;
+}
+
+/* Estilos generales del header */
+header {
+  background-color: #1a1a1a;
+  padding: 20px;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  color: white;
+  font-size: 36px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.title:hover {
+  color: #ccc;
+}
+
+.navbar-right ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-right li {
+  display: inline;
+  margin-left: 10px;
+}
+
+/* Estilos de los botones de navegación */
+.nav-button {
+  background-color: #555;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+  background-color: #777;
+}
+
+footer {
+  background-color: #1a1a1a;
+  padding: 3px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 1px solid #131212;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.social-icons .icon {
+  color: #e7dfdf;
+  font-size: 20px;
+  margin-left: 10px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons .icon:hover {
+  color: #007bff;
+  transform: scale(1.2);
+}
+
+/* Estilos para el formulario */
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="url"],
+select#genre {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+form input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+form button[type="submit"],
+form button[type="reset"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button[type="submit"]:hover,
+form button[type="reset"]:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para los inputs */
+input[type="text"],
+input[type="number"],
+input[type="url"] {
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+/* Estilos para los checkboxes */
+/* Estilos para los checkboxes */
+#genreList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 10px;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #007bff;
+}
+
+input[type="checkbox"]:checked::before {
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: white;
+  font-size: 14px;
+  display: inline-block;
+  position: relative;
+  left: 5px;
+}
