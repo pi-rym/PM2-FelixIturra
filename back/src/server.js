@@ -2,7 +2,7 @@ const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
 const movieService = require("./services/movieService");
-
+const moviesRoutes = require("./routes/movies");
 const app = express();
 
 app.use(morgan("dev"));
@@ -18,5 +18,6 @@ app.get("/movies", async (req, res) => {
     res.status(500).json({ error: "Error al obtener películas" });
   }
 });
+app.use("/peliculas", moviesRoutes);
 
 module.exports = app;

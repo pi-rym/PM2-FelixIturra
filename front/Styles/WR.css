@@ -183,17 +183,16 @@ img {
 footer {
   background-color: #1a1a1a;
   padding: 3px;
-  position: relative;
+  position: fixed;
   bottom: 0;
   left: 0;
-  height: 4%;
   width: 100%;
   box-sizing: border-box;
   border-top: 1px solid #131212;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 0px;
+  margin: 0;
 }
 
 .social-icons .icon {

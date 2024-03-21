@@ -12,6 +12,16 @@ async function getMovies() {
   }
 }
 
+exports.createMovie = async (movieData) => {
+  try {
+    const newMovie = new Movie(movieData);
+    const savedMovie = await newMovie.save();
+    return savedMovie;
+  } catch (error) {
+    throw new Error("Error creating movie");
+  }
+};
+
 module.exports = {
   getMovies,
 };
